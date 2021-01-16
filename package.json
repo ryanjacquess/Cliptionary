@@ -1,0 +1,24 @@
+{
+  "name": "fineasany2021",
+  "version": "1.0.0",
+  "description": "Packages for hackED",
+  "main": "printClipboard.js",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "clipboardy": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanjacquess/FineAsAny2021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryanjacquess/FineAsAny2021/issues"
+  },
+  "homepage": "https://github.com/ryanjacquess/FineAsAny2021#readme"
+}
