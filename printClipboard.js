@@ -1,30 +1,20 @@
 const clipboardy = require('clipboardy');
 const axios = require('axios');
+const fs = require('fs')
 
-loop();
+let old_cb = clipboardy.readSync();
+let new_cb;
 
-function loop() {
-	var old_cb = clipboardy.readSync();
-	var new_cb;
-
-    setInterval((old_cp, new_cb) => {
-		new_cb = clipboardy.readSync();
-		console.log("Looped");
-
-		if (old_cb != new_cb) {
-			console.log(new_cb);
-			old_cb = new_cb
-
-			//getPage();
-		}
-	}, 3000);
-}
-
-async function getPage() {
+setInterval(async () => {
 	try {
-		const response = await axios.get('https://jisho.org/search/%E4%BD%95/');
-		console.log(response);
+		new_cb = clipboardy.readSync()
+		if (old_cb != new_cb) {
+			old_cb = new_cb
+			const response = await axios.get(`https://jisho.org/search/${encodeURIComponent(new_cb)}`);
+			fs.writeFile('neat.html', response.data, 'utf8', () => {});
+			console.log(response.data)
+		}    
 	} catch (error) {
 		console.error(error);
 	}
-}
+},3000);
