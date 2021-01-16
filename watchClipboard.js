@@ -5,6 +5,8 @@ const fs = require('fs')
 let old_cb = clipboardy.readSync();
 let new_cb;
 
+fs.writeFile('index.html', "", 'utf8', () => {});
+
 setInterval(async () => {
 	try {
 		new_cb = clipboardy.readSync()
