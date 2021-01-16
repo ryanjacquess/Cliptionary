@@ -1,18 +1,23 @@
 const clipboardy = require('clipboardy');
 const axios = require('axios');
 
-var oldclipboard = clipboardy.readSync();
-var newclipboard;
+loop();
 
-while (true) {
-    newclipboard = clipboardy.readSync()
-    if (oldclipboard != newclipboard) {
-        console.log(newclipboard);
-        oldclipboard = newclipboard
+function loop() {
+	var old_cb = clipboardy.readSync();
+	var new_cb;
 
-		getPage();
-    }
-	setTimeout(getPage, 500);
+    setInterval((old_cp, new_cb) => {
+		new_cb = clipboardy.readSync();
+		console.log("Looped");
+
+		if (old_cb != new_cb) {
+			console.log(new_cb);
+			old_cb = new_cb
+
+			//getPage();
+		}
+	}, 3000);
 }
 
 async function getPage() {
