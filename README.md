@@ -11,10 +11,10 @@ Fear no more! *jisho-board* has got your back. With automatic searches right fro
 
 ### Unix with homebrew package manager
 ```sh
-brew install npm
-brew install node
-npm install -g browser-sync
-node ./jisho-board.js
+$ brew install npm
+$ brew install node
+$ npm install -g browser-sync
+$ node ./jisho-board.js
 ```
 Alternatively you could directly install `npm` and `node.js` from their respective websites.
 ### Windows
