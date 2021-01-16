@@ -2,6 +2,6 @@
 
 https://github.com/sindresorhus/clipboardy
 
-npm install clipboardy
+npm install
 
 node .\printClipboard.js
