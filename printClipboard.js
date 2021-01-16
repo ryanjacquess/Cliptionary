@@ -3,12 +3,11 @@ const clipboardy = require('clipboardy');
 var oldclipboard = clipboardy.readSync();
 var newclipboard;
 
-var running = true;
-
-while (running) {
+while (true) {
     newclipboard = clipboardy.readSync()
     if (oldclipboard != newclipboard) {
         console.log(newclipboard);
         oldclipboard = newclipboard
     }
+	setTimeout(() => true, 500);
 }
