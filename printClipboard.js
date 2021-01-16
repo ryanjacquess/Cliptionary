@@ -11,10 +11,9 @@ setInterval(async () => {
 		if (old_cb != new_cb) {
 			old_cb = new_cb
 			const response = await axios.get(`https://jisho.org/search/${encodeURIComponent(new_cb)}`);
-			fs.writeFile('neat.html', response.data, 'utf8', () => {});
-			console.log(response.data)
+			fs.writeFile('index.html', response.data, 'utf8', () => {});
 		}    
 	} catch (error) {
 		console.error(error);
 	}
-},3000);
+}, 3000);
