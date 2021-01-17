@@ -35,3 +35,5 @@ In command line or powershell:
 > npm install
 > node cliptionary.js
 ```
+
+This project was made as a submission to HackEd 2021
