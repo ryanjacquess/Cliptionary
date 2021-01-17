@@ -11,13 +11,13 @@ $ node ./watchClipboard.js https://www.dictionary.com/browse/
 
 ## Setting up
 *Clipboard Dictionary* requires the following dependencies to be installed on your system:
+ - git
  - npm
  - node.js
 
 ### Macos with homebrew
 In terminal:
 ```sh
-$ brew install npm
 $ brew install node
 $ git clone https://github.com/ryanjacquess/FineAsAny2021
 $ cd FineAsAny2021
@@ -27,7 +27,9 @@ $ node ./watchClipboard.js
 If you don't have brew, get it [here](https://brew.sh/#install)
 Alternatively you could directly install [npm and node](https://www.npmjs.com/get-npm) from their website.
 ### Windows
-TODO
+In command line or powershell:
 ```sh
-node .\printClipboard.js
+> git clone https://github.com/ryanjacquess/FineAsAny2021
+> cd FineAsAny2021
+> node printClipboard.js
 ```
