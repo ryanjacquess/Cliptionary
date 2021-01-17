@@ -6,20 +6,25 @@ const fs = require('fs');
 let old_cb; 
 let new_cb;
 
+// Chooses dictionary, with a fallback on jisho.org
 let url_re = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;
 let alt_dict = process.argv[2];
 let dictionary = alt_dict && alt_dict.match(url_re) ? alt_dict : "https://jisho.org/search/";
 
+// Overwrites index.html with starting message
 fs.writeFile('index.html', init_msg(), 'utf8', () => {});
 
+// Starts live-reload server
 bs.init({
     server: "./"
 });
 
+// Checks for clipboard updates every 1000ms
 update();
-setInterval(update, 1500);
+setInterval(update, 1000);
 
 
+// Requests webpage with the clipboard as search input
 async function update() {
 	try {
 		new_cb = clipboardy.readSync()
@@ -35,22 +40,54 @@ async function update() {
 }
 
 
+// Starting webpage. Uses a function for hoisting 
 function init_msg() {
  	return `
-	<h3>Welcome to clipboard monitoring for jisho.org!</h3>
+	<style>
+	body {
+        color: rgb(209, 177, 144);
+        font-family: Arial, sans-serif;
+        background-color: rgb(34, 34, 34);
+	}
+    .placeholder {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+		align-items: center;
+    }
+    .placeholder p {
+        font-family: Verdana, Arial, sans-serif;
+        color: rgb(209, 177, 144);
+		max-width: 900px;
+    }
+	.placeholder p span {
+		color: rgb(167, 164, 47);
+	}
+	.placeholder a {
+		color: rgb(199, 92, 87);
+	}
+	.placeholder a:active {
+		color: #ff7670;
+	}
+    </style>
 
-	<p><strong><u>Reload this page to begin automatic searching</strong></u>. (ctrl + r) on windows/linux, (command + r) on Mac</u></strong></p>
-	
-	<p>If you accidently close this tab, head over to terminal and copy/paste the url into any browser. 
-	<br> You'll likely want to use the url labeled \`Local:\`, for example: https://localhost:3000</p>
+	<div class="placeholder">
+		<h3>Welcome to Clipboard Dictionary!</h3>
 
-	<p>To end clipboard monitoring, go back to your terminal and hit (ctrl + c). <br>
-	Mac users will also want to hit (control + c) not (command + c)</p>
+		<p><strong><u>Reload this page to begin automatic searching</strong></u>. (ctrl + r) on windows/linux, (command + r) on Mac</u></strong></p>
+		
+		<p>If you accidently close this tab, head over to terminal and copy/paste the url into any browser. 
+		<br> You'll likely want to use the url labeled \`Local:\`, for example: https://localhost:3000</p>
 
-	<p>To change your dictionary, simply provided it as an argument at runtime. <br>
-	Example: <span style="font-family: monospace">node watchClipboard.js https://www.dictionary.com/browse/</span><br>
-	Please note that errors while searching won't update your webpage. 
-	Also, be sure your url is the full url for searching words on that dictionary</p>
+		<p>To end clipboard monitoring, go back to your terminal and hit (ctrl + c). <br>
+		Mac users will also want to hit (control + c) not (command + c)</p>
 
-	<a href="https://github.com/ryanjacquess/FineAsAny2021">Check out the open source code!</a>`
+		<p>To change your dictionary, simply provided it as an argument at runtime. <br>
+		Example: <span style="font-family: monospace">node watchClipboard.js https://www.dictionary.com/browse/</span></p>
+
+		<p>Please note that errors while searching won't update your webpage. 
+		Also, be sure your url is the full url for searching words on that dictionary</p>
+
+		<a href="https://github.com/ryanjacquess/FineAsAny2021">Check out the open source code!</a>
+	</div>`
 }

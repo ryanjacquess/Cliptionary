@@ -1,5 +1,6 @@
 # Clipboard Dictionary
 Ever started reading in a new language only to quickly realize the importance of a dictionary crutch? Remember how irritated you got opening a new search window every second word?
+
 Fear no more! *Clipboard Dictionary* has got your back. With automatic searches right from your clipboard, you can forget about manually researching every word!
 
 Default for dictionary is jisho.org. Specify your own dictionary as an optional argument
