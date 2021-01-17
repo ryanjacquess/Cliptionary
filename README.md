@@ -1,4 +1,4 @@
-# Cliptionary
+# Cliptionary        ![Logo](https://github.com/ryanjacquess/Cliptionary/blob/main/icon1.png)
 Ever started reading in a new language only to quickly realize the importance of a dictionary crutch? Remember how irritated you got opening a new search window every second word?
 
 Fear no more! Cliptionary has got your back. With automatic searches right from your clipboard, you can forget about manually searching every word!
