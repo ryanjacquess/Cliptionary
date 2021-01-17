@@ -74,13 +74,13 @@ function init_msg() {
 	<div class="placeholder">
 		<h3>Welcome to Cliptionary!</h3>
 
-		<p><strong><u>Reload this page to begin automatic searching</strong></u>. (ctrl + r) on windows/linux, (command + r) on Mac</u></strong></p>
+		<p><strong><u>Reload this page to begin automatic searching</strong></u>. (Ctrl+R) on Windows/Linux, (command+R) on Mac</u></strong></p>
 		
 		<p>If you accidentally close this tab, head over to terminal and copy/paste the URL into any browser. 
 		<br> You'll likely want to use the URL labeled \`Local:\`, for example: https://localhost:3000</p>
 
-		<p>To end clipboard monitoring, go back to your terminal and hit (ctrl + c). <br>
-		Mac users will also want to hit (control + c) not (command + c)</p>
+		<p>To end clipboard monitoring, go back to your terminal and hit (Ctrl+C). <br>
+		Mac users will also want to hit (control+C) not (command+C)</p>
 
 		<p>To change your dictionary, simply provide it as an argument at runtime. <br>
 		Example: <span style="font-family: monospace">node cliptionary.js https://www.dictionary.com/browse/</span></p>
