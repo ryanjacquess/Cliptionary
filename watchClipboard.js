@@ -6,8 +6,9 @@ const fs = require('fs');
 let old_cb; 
 let new_cb;
 
-var url_re = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;
-let dictionary = process.argv[2].match(url_re) ? process.argv[2] : "https://jisho.org/search/";
+let url_re = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;
+let alt_dict = process.argv[2];
+let dictionary = alt_dict && alt_dict.match(url_re) ? alt_dict : "https://jisho.org/search/";
 
 fs.writeFile('index.html', init_msg(), 'utf8', () => {});
 
