@@ -16,7 +16,7 @@ Cliptionary requires the following dependencies to be installed on your system:
  - npm
  - node.js
 
-### Macos with homebrew
+### macOS with homebrew
 In terminal:
 ```sh
 $ brew install node
