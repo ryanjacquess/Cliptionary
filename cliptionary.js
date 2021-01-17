@@ -72,22 +72,22 @@ function init_msg() {
     </style>
 
 	<div class="placeholder">
-		<h3>Welcome to Clipboard Dictionary!</h3>
+		<h3>Welcome to Cliptionary!</h3>
 
 		<p><strong><u>Reload this page to begin automatic searching</strong></u>. (ctrl + r) on windows/linux, (command + r) on Mac</u></strong></p>
 		
-		<p>If you accidently close this tab, head over to terminal and copy/paste the url into any browser. 
-		<br> You'll likely want to use the url labeled \`Local:\`, for example: https://localhost:3000</p>
+		<p>If you accidentally close this tab, head over to terminal and copy/paste the URL into any browser. 
+		<br> You'll likely want to use the URL labeled \`Local:\`, for example: https://localhost:3000</p>
 
 		<p>To end clipboard monitoring, go back to your terminal and hit (ctrl + c). <br>
 		Mac users will also want to hit (control + c) not (command + c)</p>
 
-		<p>To change your dictionary, simply provided it as an argument at runtime. <br>
+		<p>To change your dictionary, simply provide it as an argument at runtime. <br>
 		Example: <span style="font-family: monospace">node watchClipboard.js https://www.dictionary.com/browse/</span></p>
 
 		<p>Please note that errors while searching won't update your webpage. 
-		Also, be sure your url is the full url for searching words on that dictionary</p>
+		Also, be sure your URL is the full URL for searching words on that dictionary</p>
 
-		<a href="https://github.com/ryanjacquess/FineAsAny2021">Check out the open source code!</a>
+		<a href="https://github.com/ryanjacquess/Cliptionary">Check out the open source code!</a>
 	</div>`
 }

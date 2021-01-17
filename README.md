@@ -30,8 +30,8 @@ Alternatively you could directly install [npm and node](https://www.npmjs.com/ge
 ### Windows
 In command line or powershell:
 ```sh
-> git clone https://github.com/ryanjacquess/FineAsAny2021
-> cd FineAsAny2021
+> git clone https://github.com/ryanjacquess/Cliptionary
+> cd Cliptionary
 > npm install
 > node cliptionary.js
 ```
