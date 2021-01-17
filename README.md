@@ -31,5 +31,6 @@ In command line or powershell:
 ```sh
 > git clone https://github.com/ryanjacquess/FineAsAny2021
 > cd FineAsAny2021
+> npm install
 > node printClipboard.js
 ```
