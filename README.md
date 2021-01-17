@@ -32,5 +32,5 @@ In command line or powershell:
 > git clone https://github.com/ryanjacquess/Cliptionary
 > cd Cliptionary
 > npm install
-> node printClipboard.js
+> node watchClipboard.js
 ```
