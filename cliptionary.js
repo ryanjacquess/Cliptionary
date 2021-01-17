@@ -83,7 +83,7 @@ function init_msg() {
 		Mac users will also want to hit (control + c) not (command + c)</p>
 
 		<p>To change your dictionary, simply provide it as an argument at runtime. <br>
-		Example: <span style="font-family: monospace">node watchClipboard.js https://www.dictionary.com/browse/</span></p>
+		Example: <span style="font-family: monospace">node cliptionary.js https://www.dictionary.com/browse/</span></p>
 
 		<p>Please note that errors while searching won't update your webpage. 
 		Also, be sure your URL is the full URL for searching words on that dictionary</p>
